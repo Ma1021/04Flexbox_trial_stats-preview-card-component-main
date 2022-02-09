@@ -68,6 +68,50 @@ Solution provided by changing background image of the div --> no need to load bo
 https://stackoverflow.com/questions/30460681/changing-image-src-depending-on-screen-size
 May be I will use this one (I am not too familiar with this one)
 
+2. Add filter to the image
+
+First I thought of  filter, but it is using customized filter instead of adding the color filter on my own.
+https://developer.mozilla.org/en-US/docs/Web/CSS/filter
+
+Then I use the two layer method, adding opacity to the photo --> but the color is so different??
+https://stackoverflow.com/questions/9182978/semi-transparent-color-layer-over-background-image
+
+3. Flex-shrink
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/flex-shrink
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax
+
+4. Extra length in viewport height and width
+
+from browser --> my normalize???
+
+5. Mystical left space for list
+https://stackoverflow.com/questions/9111204/align-list-item-to-the-left-in-unordered-list 
+
+
+6. Putting footer in the right place 
+
+https://stackoverflow.com/questions/32551291/in-css-flexbox-why-are-there-no-justify-items-and-justify-self-properties/33856609#33856609
+
+
+https://stackoverflow.com/questions/40890613/remove-space-gaps-between-multiple-lines-of-flex-items-when-they-wrap
+
+before is the first child of selected element
+https://developer.mozilla.org/en-US/docs/Web/CSS/::before
+
+7. Centralize the background image
+
+https://stackoverflow.com/questions/2643305/centering-a-background-image-using-css
+
+8. Mobile device size, flex will not expand the container
+
+https://css-tricks.com/boxes-fill-height-dont-squish/
+
+9. Is it better to do it with flex-shrink/flex-grow??????
+
+could they work out without width of child container?
+
 ```html
 <h1>Some HTML code I'm proud of</h1>
 ```

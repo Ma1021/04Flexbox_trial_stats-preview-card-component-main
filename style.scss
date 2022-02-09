@@ -1,0 +1,175 @@
+@import "./normalize.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+$main_very_dark_blue: hsl(233, 47%, 7%);
+$card_dark_desaturated_blue: hsl(244, 38%, 16%);
+$soft_violet: hsl(277, 64%, 61%);
+
+$main_white: hsl(0, 0%, 100%);
+$main_slightly_transparent_white: hsla(0, 0%, 100%, 0.75);
+$stat_slightly_transparent_white: hsla(0, 0%, 100%, 0.6);
+
+body{
+    font-size: 15px;
+    background-color: $main_very_dark_blue;
+    color: $main_slightly_transparent_white;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    font-family: 'Inter', sans-serif;
+    margin:0px;
+    
+    
+    .card{
+        width: 70%;
+        max-width: 900px;
+        min-width: 600px;
+        align-self: center;
+        background-color: $card_dark_desaturated_blue;
+        display: flex;
+        flex-direction: row-reverse;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        box-sizing: border-box;
+        
+        
+        header{
+            flex: 0 0 auto ;
+            width: 50%;
+            background-image:url("./images/image-header-desktop.jpg");
+            background-size: cover;
+            background-position: center center;
+            position: relative;
+            
+            .layer{
+                width: 100%;
+                height: 100%;
+                background-color: $soft_violet;
+                opacity: 50%;
+            }
+        }
+        
+        main{
+            width: calc(50% - 10%);
+            padding: 4% 5% 4% 5%;
+            
+            .content{
+                padding-bottom: 1rem;
+                
+                h1 {
+                    color: $main_white;
+                    
+                    span{
+                        color: $soft_violet;
+                    }
+                }
+                
+                p{
+                    line-height: 1.5rem;
+                    font-size: 14px;
+                }
+            }
+
+            .points{
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                
+                ul{
+                    padding-left:0px;
+                    width: 100%;
+                    height: 100%;
+                    list-style:  none;
+                    
+                    li{
+                        display: inline-block;
+                        width: 32%;
+                        height: 100%;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                        font-size: 10px;
+                        font-family: 'Lexend Deca', sans-serif;
+                        color: $stat_slightly_transparent_white;
+
+                        span{
+                            display: block;
+                            font-size: 23px;
+                            font-family: 'Inter', sans-serif;
+                            font-weight: 700;
+                            margin-bottom: 4px;
+                            color: $main_white;
+                            letter-spacing: normal;
+                            
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+    footer{
+        display:block;
+        width: 100%;
+        align-self: flex-end;
+        margin-bottom: .5rem;
+    }
+    
+}
+
+body::before{
+    content:"";
+    height: 15px;
+    padding-top: 0.5em;
+}
+
+@media screen and (max-width:480px) {
+    body{
+        .card{
+            min-width: 250px;
+            flex: 0 0 auto ;
+            width: 90%;
+            flex-direction: column;
+            min-height: 90%;
+
+            header{
+                flex-basis: 40%;
+                width: 100%;
+                background-image: url("./images/image-header-mobile.jpg");
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+
+            main{
+                flex-basis: content;
+                width: 85%;
+                height: 100%;
+                padding: 0;
+                margin: 0 auto;
+                text-align: center;
+
+                .content{
+                    margin-bottom: 0;
+
+                    p{
+                        margin: 0;
+                    }
+                }
+
+                .points{
+                    ul{
+                        li{
+                            width: 100%;
+                        }
+                        li:nth-child(3n-1){
+                            margin: 1rem 0px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

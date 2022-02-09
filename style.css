@@ -1,0 +1,182 @@
+@charset "UTF-8";
+@import url(c:\Users\maggi\OneDrive\文件\04stats-preview-card-component-main\normalize.css);
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+body {
+  font-size: 15px;
+  background-color: #090b1a;
+  color: rgba(255, 255, 255, 0.75);
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-family: 'Inter', sans-serif;
+  margin: 0px;
+}
+
+body .card {
+  width: 70%;
+  max-width: 900px;
+  min-width: 600px;
+  -ms-flex-item-align: center;
+      align-self: center;
+  background-color: #1b1938;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body .card header {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 50%;
+  background-image: url("./images/image-header-desktop.jpg");
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+
+body .card header .layer {
+  width: 100%;
+  height: 100%;
+  background-color: #aa5cdb;
+  opacity: 50%;
+}
+
+body .card main {
+  width: calc(50% - 10%);
+  padding: 4% 5% 4% 5%;
+}
+
+body .card main .content {
+  padding-bottom: 1rem;
+}
+
+body .card main .content h1 {
+  color: white;
+}
+
+body .card main .content h1 span {
+  color: #aa5cdb;
+}
+
+body .card main .content p {
+  line-height: 1.5rem;
+  font-size: 14px;
+}
+
+body .card main .points {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+}
+
+body .card main .points ul {
+  padding-left: 0px;
+  width: 100%;
+  height: 100%;
+  list-style: none;
+}
+
+body .card main .points ul li {
+  display: inline-block;
+  width: 32%;
+  height: 100%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 10px;
+  font-family: 'Lexend Deca', sans-serif;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+body .card main .points ul li span {
+  display: block;
+  font-size: 23px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: white;
+  letter-spacing: normal;
+}
+
+body footer {
+  display: block;
+  width: 100%;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-bottom: .5rem;
+}
+
+body::before {
+  content: "";
+  height: 15px;
+  padding-top: 0.5em;
+}
+
+@media screen and (max-width: 480px) {
+  body .card {
+    min-width: 250px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    width: 90%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    min-height: 90%;
+  }
+  body .card header {
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
+    width: 100%;
+    background-image: url("./images/image-header-mobile.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  body .card main {
+    -ms-flex-preferred-size: content;
+        flex-basis: content;
+    width: 85%;
+    height: 100%;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+  }
+  body .card main .content {
+    margin-bottom: 0;
+  }
+  body .card main .content p {
+    margin: 0;
+  }
+  body .card main .points ul li {
+    width: 100%;
+  }
+  body .card main .points ul li:nth-child(3n-1) {
+    margin: 1rem 0px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
