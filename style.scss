@@ -116,6 +116,7 @@ body{
         width: 100%;
         align-self: flex-end;
         margin-bottom: .5rem;
+        flex-shrink: 1;
     }
     
 }
@@ -124,6 +125,7 @@ body::before{
     content:"";
     height: 15px;
     padding-top: 0.5em;
+    flex-shrink: 1;
 }
 
 @media screen and (max-width:480px) {
@@ -133,7 +135,8 @@ body::before{
             flex: 0 0 auto ;
             width: 90%;
             flex-direction: column;
-            min-height: 90%;
+            flex-grow: 1;
+            max-height: 90%;
 
             header{
                 flex-basis: 40%;

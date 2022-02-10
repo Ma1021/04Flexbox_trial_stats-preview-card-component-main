@@ -128,12 +128,16 @@ body footer {
   -ms-flex-item-align: end;
       align-self: flex-end;
   margin-bottom: .5rem;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
 }
 
 body::before {
   content: "";
   height: 15px;
   padding-top: 0.5em;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
 }
 
 @media screen and (max-width: 480px) {
@@ -147,7 +151,10 @@ body::before {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    min-height: 90%;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    max-height: 90%;
   }
   body .card header {
     -ms-flex-preferred-size: 40%;
